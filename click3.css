@@ -1,0 +1,81 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+
+    font-family: sans-serif;
+
+    background: #0081ff;
+}
+
+.nav {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 2rem);
+    padding: 1rem;
+}
+
+.nav a {
+    display: block;
+    padding-right: 0.8rem;
+
+    text-decoration: none;
+
+    color: #fff;
+}
+
+.nav a.active {
+    text-decoration: underline;
+}
+
+.title {
+    font-size: 1.1rem;
+    font-weight: 100;
+
+    color: #fff;
+    opacity: 0.5;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: calc(100% - 2rem);
+    height: 3.5rem;
+    margin: 1rem;
+}
+
+.button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.5rem;
+    height: 3.5rem;
+
+    border-radius: 50%;
+    background-color: #fff;
+
+    transition: all 0.2s ease-in-out;
+}
+
+.button svg {
+    position: relative;
+    display: block;
+    top: 1px;
+    width: 50%;
+    height: 50%;
+
+    pointer-events: none;
+}
+
+.button:active {
+    transform: scale(1.1);
+}

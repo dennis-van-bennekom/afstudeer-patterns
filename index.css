@@ -1,0 +1,104 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+
+    font-family: sans-serif;
+
+    background: #0081ff;
+}
+
+.nav {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+}
+
+.nav a {
+    display: block;
+    padding-right: 0.8rem;
+
+    text-decoration: none;
+
+    color: #fff;
+}
+
+.nav a.active {
+    text-decoration: underline;
+}
+
+.title {
+    font-size: 1.1rem;
+    font-weight: 100;
+
+    color: #fff;
+    opacity: 0.5;
+}
+
+.button-container {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: calc(100% - 2rem);
+    height: 3.5rem;
+    margin: 1rem;
+}
+
+.button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.5rem;
+    height: 3.5rem;
+
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.button svg {
+    position: relative;
+    display: block;
+    top: 1px;
+    width: 50%;
+    height: 50%;
+
+    pointer-events: none;
+}
+
+.heart {
+    position: absolute;
+    right: 1.875rem;
+    width: 1.75rem;
+    height: 1.75rem;
+
+    pointer-events: none;
+
+    background-image: url('heart.svg');
+    background-size: 100% 100%;
+
+    animation: float 1s linear forwards;
+}
+
+@keyframes float {
+    0% { opacity: 1;
+        bottom: 2rem;
+        transform: rotateZ(0deg);
+    }
+    12% {transform: rotateZ(-10deg);}
+    24% {transform: rotateZ(10deg);}
+    40% {transform: rotateZ(-6deg);}
+    70% {transform: rotateZ(5deg) scale(0.8);
+        opacity: .8; }
+
+    100% { opacity: 0;
+        bottom: 12rem;
+        transform: rotateZ(-3deg) scale(0.6);
+    }
+}
